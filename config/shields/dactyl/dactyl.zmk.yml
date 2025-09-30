@@ -1,0 +1,10 @@
+file_format: "1"
+id: dactyl
+name: Dactyl
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+sibligns:
+  - dactyl-left
+  - dactyl-right
