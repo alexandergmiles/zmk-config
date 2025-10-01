@@ -1,13 +1,93 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "dactyl-layouts.dtsi"
+#include <physical-layouts.dtsi>
+
 / {
     chosen {
 		zmk,kscan = &kscan0;
         zmk,phsyical-layout = &default_layout;
 	};
-	
-	&default_layout {
+	kscan0: kscan0 {
+	  compatible = "zmk,kscan-gpio-matrix";
+	  diode-direction = "col2row";
+	  wakeup-source;
+
+	  row-gpios
+	  	= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	, <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	  	;
+	};
+	default_layout: default_layout {
+	  compatible = "zmk,phsyical-layout";
+	  display-name = "Default Layout";
 	  transform = <&default_transform>;
+
+	  keys
+		= <&key_physical_attrs 100 100    0   61       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+        , <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		, <&key_physical_attrs 100 100  100   28       0     0     0>
+		;
 	};
 
 	default_transform: keymap_transform0 {
@@ -24,18 +104,5 @@
 		>;
   	};
 
-  	kscan0: kscan0 {
-		compatible = "zmk,kscan-gpio-matrix";
-		diode-direction = "col2row";
-		wakeup-source;
 
-		row-gpios
-	  		= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  	;
-	};
 };
