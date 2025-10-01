@@ -3,7 +3,7 @@
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+		zmk,kscan = &kscan0;
         zmk,physical-layout = &dactyl_physical_layout;
     };
 
@@ -34,7 +34,7 @@
 	  		, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  	;
-		col-gpois
+		col-gpios
 	  		= <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  		, <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  		, <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
