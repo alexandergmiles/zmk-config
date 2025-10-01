@@ -6,6 +6,13 @@
         zmk,phsyical-transform = &physical_layout0;
 	};
 
+	physical_layout0: physical_layout_0 {
+	  compatible = "zmk,physical-layout";
+	  display-name = "Default Layout";
+	  kscan = <&kscan0>;
+	  transform = <&default_transform>;
+	};
+
   	default_transform: keymap_transform0 {
 		compatible = "zmk,matrix_transform";
 		columns = <12>;
@@ -33,20 +40,5 @@
 	  		, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	  	;
-		col-gpios
-	  		= <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  		, <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	  	;
-	};
-
-	physical_layout0: physical_layout_0 {
-	  compatible = "zmk,physical-layout";
-	  display-name = "Default Layout";
-	  kscan = <&kscan0>;
-	  transform = <&default_transform>;
 	};
 };
