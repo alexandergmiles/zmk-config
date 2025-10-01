@@ -3,7 +3,7 @@ config ZMK_KEYBOARD_NAME
   default "Dactyl"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-  default ZMK_KEYBOARD_NAME
+  default y
 endif
 
 if SHIELD_DACTYL_LEFT || SHIELD_DACTYL_RIGHT
