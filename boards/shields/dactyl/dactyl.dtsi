@@ -3,7 +3,7 @@
 / {
     chosen {
 		zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical-layout0;
+        zmk,physical-layout = &physical_layout0;
 	};
 
   	default_transform: keymap_transform0 {
@@ -43,7 +43,7 @@
 	  	;
   };
 
-  physical-layout0: physical_layout_0 {
+  physical_layout0: physical_layout_0 {
 	compatible = "zmk,physical-layout";
 	display-name = "Default Layout";
 	kscan = <&kscan0>;
