@@ -5,6 +5,10 @@
 		zmk,kscan = &kscan0;
         zmk,phsyical-layout = &default_layout;
 	};
+	
+	&default_layout {
+	  transform = <&default_transform>;
+	};
 
 	default_transform: keymap_transform0 {
 		compatible = "zmk,matrix_transform";
