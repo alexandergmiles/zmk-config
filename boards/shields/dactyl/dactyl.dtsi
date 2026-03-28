@@ -20,18 +20,6 @@
 	  compatible = "zmk,phsyical-layout";
 	  display-name = "Default Layout";
 	  transform = <&default_transform>;
-
-	  keys
-		= <&key_physical_attrs 100 100    0   61       0     0     0>
-        , <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		, <&key_physical_attrs 100 100  100   28       0     0     0>
-		;
 	};
 
 	default_transform: keymap_transform0 {
